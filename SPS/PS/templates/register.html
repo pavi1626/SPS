@@ -1,0 +1,65 @@
+<!-- Parking/templates/register.html -->
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Smart Parking System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="auth-page">
+        <form class="auth-form" action="{% url 'register' %}" method="post">
+            <h2>Register</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </form>
+    </div>
+    {% load static %}
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Smart Parking System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="auth-page">
+        <form class="auth-form" action="{% url 'login' %}" method="post">
+            <h2>Register</h2>
+            {% csrf_token %}
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="apartment">Apartment Number:</label>
+            <input type="text" id="apartment" name="apartment" required>
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Register</button>
+            
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+            {% comment %} <p>Already have an account? Login here</a></p> {% endcomment %}
+        </form>
+    </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>
+

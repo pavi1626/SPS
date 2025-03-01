@@ -1,0 +1,407 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hamburger Menu (Mobile) */
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Hero Section */
+header {
+    background: url('https://cdn.prod.website-files.com/628905bae461d31c437ea344/6515800bfdb447b4b472c956_smart%20poles%20day%20night%20(1).jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+header .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Feature Section */
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    background-size: cover;
+}
+
+.feature.ir-sensor {
+    background-image: url('https://media.sketchfab.com/models/9ebc2012b48446fa8662fa43ff3481db/thumbnails/804a5ff07aa6422ca376c194a7e97d14/41e3d8b9a92e499cb86596d7459c6f79.jpeg');
+}
+
+.feature.camera {
+    background-image: url('https://www.shaip.com/wp-content/uploads/2022/08/Blog_Automatic-Number-Plate-Recognition-ANPR.jpg');
+}
+
+.feature h3 {
+    color: #4CAF50;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #333;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* How It Works Section */
+.how-it-works-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.how-it-works-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.how-it-works-content p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Live Demo Section */
+#demo p {
+    text-align: center;
+    color: #555;
+}
+
+/* Contact Section */
+#contact form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact form button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact form button:hover {
+    background: #45a049;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.5rem;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.back-to-top:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+/* Authentication Pages (Login & Register) */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.auth-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #4CAF50;
+    text-align: center;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.auth-form input,
+.auth-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.auth-form button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.auth-form button:hover {
+    background: #45a049;
+}
+
+.auth-form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-form p a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Additional Enhancements */
+.animate {
+    animation: fadeIn 1s ease-in-out;
+}

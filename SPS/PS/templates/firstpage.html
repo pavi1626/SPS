@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    {% load static %}
+    <!-- Correct link to static CSS file -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">Smart Parking System</a>
+            <div class="nav-toggle">&#9776;</div> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Transform Your Parking Experience with Smart Technology</h1>
+            <p>Efficient, Secure, and Convenient Parking Management for Your Apartments</p>
+            <a href="#how-it-works" class="cta-button">See How It Works</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature ir-sensor">
+                    <h3>IR Sensors</h3>
+                    <p>Detect free and occupied parking slots in real-time using IR sensors.</p>
+                </div>
+                <div class="feature camera">
+                    <h3>Number Plate Recognition</h3>
+                    <p>Ensure cars park in their allocated slots using advanced camera technology.</p>
+                </div>
+                <!-- Add more features if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="how-it-works-content">
+                <!-- Correct link to static image -->
+                <img src="{% static 'system-diagram.png' %}" alt="System Diagram">
+                <p>Our system uses IoT technology to monitor parking slots. IR sensors detect slot availability, and cameras ensure vehicles are parked in their designated spots.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo">
+        <div class="container">
+            <h2>Live Demo</h2>
+            <p>Watch our smart parking system in action and see how it optimizes parking management.</p>
+            <!-- Embed a video or interactive demo here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Parking System. All rights reserved.</p>
+            <div class="social-media">
+                <!-- Correct link to static images -->
+                <a href="#"><img src="{% static 'facebook-icon.png' %}" alt="Facebook"></a>
+                <a href="#"><img src="{% static 'twitter-icon.png' %}" alt="Twitter"></a>
+                <!-- Add more social media links if needed -->
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">Top</button>
+
+    {% load static %}
+    <!-- Correct link to static JS file -->
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

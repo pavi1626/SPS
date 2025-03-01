@@ -1,0 +1,29 @@
+<!-- Parking/templates/contact.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Parking System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="auth-page">
+        <form class="auth-form" action="{% url 'contact' %}" method="post">
+            <h2>Contact Us</h2>
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="message {{ message.tags }}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+            <p><a href="{% url 'home' %}">Back to Home</a></p>
+        </form>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
